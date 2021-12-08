@@ -6,6 +6,7 @@
 
 .footer__content {
   display: flex;
+  justify-content: space-between;
   @extend %container;
 }
 
