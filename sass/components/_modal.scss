@@ -81,12 +81,16 @@
   letter-spacing: 0.01em;
 }
 
-.main-modal__input {
+.main-modal__group {
   position: relative;
+}
+
+.main-modal__input {
   padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  width: 100%;
   cursor: pointer;
   transition: border-color 250ms $standart-cubic;
 
@@ -103,7 +107,8 @@
 .main-modal__icon {
   margin-left: 12px;
   position: absolute;
-  top: 67%;
+  left: 0;
+  top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms $standart-cubic;
 }
@@ -144,6 +149,11 @@
   border: transparent;
 }
 
+.checkbox__input:focus + .checkbox__icon,
+.checkbox__input:hover + .checkbox__icon {
+  border: 1px solid $accent-color;
+}
+
 .checkbox__link {
   color: $accent-color;
   text-decoration-line: underline;
@@ -172,7 +182,8 @@
   color: $white-color;
   transition: background 250ms $standart-cubic;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $accent-color-btn;
   }
 }
